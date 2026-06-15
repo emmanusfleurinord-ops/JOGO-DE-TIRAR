@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚀 Nova Strike</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="wrapper">
+
+    <div id="hud">
+      <div class="hud-col">
+        <span class="hud-label">PONTOS</span>
+        <span class="hud-val" id="hudScore">0</span>
+      </div>
+      <div class="hud-col center">
+        <span class="hud-logo">NOVA STRIKE</span>
+      </div>
+      <div class="hud-col right">
+        <span class="hud-label">VIDAS</span>
+        <span class="hud-val" id="hudLives">♥ ♥ ♥</span>
+      </div>
+    </div>
+
+    <canvas id="c"></canvas>
+
+    <!-- MENU -->
+    <div id="screen-menu" class="screen active">
+      <div class="screen-inner">
+        <p class="screen-eyebrow">ARCADE SHOOTER</p>
+        <h1 class="screen-title">NOVA<br/><span>STRIKE</span></h1>
+        <p class="screen-sub">Destrua as ondas inimigas antes que te alcancem.</p>
+        <button class="btn-primary" id="btnStart">INICIAR MISSÃO</button>
+        <div class="key-hints">
+          <div class="key-hint"><kbd>←</kbd><kbd>→</kbd> mover</div>
+          <div class="key-hint"><kbd>ESPAÇO</kbd> atirar</div>
+          <div class="key-hint"><kbd>↑</kbd> turbo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="screen-over" class="screen">
+      <div class="screen-inner">
+        <p class="screen-eyebrow over-eyebrow">MISSÃO FALHOU</p>
+        <h1 class="screen-title over-title">GAME<br/><span>OVER</span></h1>
+        <div class="score-box">
+          <div class="score-row">
+            <span>Pontuação</span>
+            <strong id="overScore">0</strong>
+          </div>
+          <div class="score-row">
+            <span>Recorde</span>
+            <strong id="overBest">0</strong>
+          </div>
+        </div>
+        <button class="btn-primary" id="btnRestart">TENTAR NOVAMENTE</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
